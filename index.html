@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="noknoc 同时开放两个创作者激励活动：社媒出圈拿现金投流，或开一个企划世界当世界主。">
+<meta property="og:title" content="NokNoc创作者激励计划">
+<meta property="og:description" content="两个活动，任选其一，也可以同时参加。">
+<meta property="og:image" content="assets/hero.jpg">
+<style>
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0}
+  img{max-width:100%}
+  [hidden]{display:none!important}
+</style>
+<title>NokNoc创作者激励计划</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=ZCOOL+QingKe+HuangYou&family=Noto+Sans+SC:wght@400;500;700&display=swap">
+<style>
+  /* 单一视觉世界：柠檬黄海报 —— 所有颜色显式绘制，不随宿主主题变化 */
+  :root{
+    --lemon:#FFDE3D; --lemon-deep:#F5C400; --lemon-soft:#FFF3B8;
+    --ink:#151D52; --ink-2:#4E579B; --paper:#FFFFFF;
+    --a:#FF4A1F; --a-soft:#FFE7DE;
+    --b:#2B4BFF; --b-soft:#E2E7FF;
+    --r:26px; --bw:3px;
+    --hard:8px 8px 0 var(--ink);
+    --hard-sm:4px 4px 0 var(--ink);
+  }
+
+  *{box-sizing:border-box}
+  body{
+    background-color:var(--lemon);
+    background-image:radial-gradient(circle, rgba(21,29,82,.09) 1.4px, transparent 1.5px);
+    background-size:20px 20px;
+    color:var(--ink);
+    font-family:"Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    font-size:15px; line-height:1.75; margin:0;
+    padding-inline:20px; padding-block:0 80px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1040px; margin:0 auto}
+  .disp{font-family:"ZCOOL QingKe HuangYou","Noto Sans SC",sans-serif; font-weight:400}
+  .bungee{font-family:Bungee,"Noto Sans SC",sans-serif; font-weight:400; letter-spacing:.02em}
+  h1,h2,h3,h4,h5{margin:0; text-wrap:balance}
+  a{color:inherit}
+  table{border-collapse:collapse}
+  .scroller{overflow-x:auto; -webkit-overflow-scrolling:touch}
+  :focus-visible{outline:3px solid var(--a); outline-offset:3px; border-radius:8px}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
+
+  /* ---------------- 顶部斜纹条 ---------------- */
+  .tape{
+    margin-inline:-20px; height:16px;
+    background:repeating-linear-gradient(115deg, var(--ink) 0 11px, var(--lemon) 11px 16px, var(--a) 16px 27px, var(--lemon) 27px 32px);
+  }
+
+  /* ---------------- HERO ---------------- */
+  .hero{position:relative; padding:54px 0 12px; max-width:1040px; margin:0 auto}
+  .badge-row{display:flex; align-items:center; gap:14px; flex-wrap:wrap}
+  .brand-chip{
+    display:inline-block; background:var(--ink); color:var(--lemon);
+    border-radius:999px; padding:9px 20px 7px;
+    font-family:Bungee,sans-serif; font-size:clamp(14px,2.4vw,19px); letter-spacing:.08em;
+    box-shadow:var(--hard-sm);
+  }
+  .brand-chip small{font-family:"Noto Sans SC",sans-serif; font-weight:700; font-size:.66em; letter-spacing:.06em; margin-left:8px}
+  .hero h1{
+    font-family:"ZCOOL QingKe HuangYou","Noto Sans SC",sans-serif; font-weight:400;
+    font-size:clamp(42px,10.4vw,104px); line-height:1.02; margin:26px 0 0; letter-spacing:.005em;
+  }
+  .hero h1 .row{display:block}
+  .hero h1 .n{
+    font-family:Bungee,sans-serif; font-size:.3em; vertical-align:.5em; margin-right:.22em;
+    color:var(--paper); -webkit-text-stroke:2px var(--ink); paint-order:stroke fill;
+  }
+  .hero h1 .hl{
+    position:relative; display:inline-block; padding:0 .1em;
+    color:var(--paper); -webkit-text-stroke:3px var(--ink); paint-order:stroke fill;
+  }
+  .hero h1 .hl.orange{color:var(--a)}
+  .hero h1 .hl.blue{color:var(--b)}
+  .lede{
+    max-width:30em; margin:24px 0 0; font-size:clamp(15px,2.4vw,18px); font-weight:500;
+    color:var(--ink);
+  }
+  .sticker{
+    display:flex; gap:12px; align-items:flex-start; margin:30px 0 0; max-width:36em;
+    background:var(--paper); border:var(--bw) solid var(--ink); border-radius:16px;
+    padding:15px 19px; font-weight:700; font-size:14.5px; line-height:1.6;
+    transform:rotate(-1.1deg); box-shadow:var(--hard);
+  }
+  .sticker .star{font-family:Bungee,sans-serif; color:var(--a); font-size:19px; line-height:1.2}
+
+  /* ---------------- 区块标题 ---------------- */
+  .sec{display:flex; align-items:center; gap:16px; margin:62px 0 24px}
+  .sec h2{font-family:"ZCOOL QingKe HuangYou",sans-serif; font-size:clamp(26px,5vw,40px)}
+  .sec .rule{flex:1; height:var(--bw); background:var(--ink); border-radius:2px}
+  .sec .tag{
+    font-family:Bungee,sans-serif; font-size:11px; letter-spacing:.14em;
+    background:var(--ink); color:var(--lemon); border-radius:999px; padding:6px 13px 4px;
+    white-space:nowrap;
+  }
+
+  /* ---------------- 轨道卡 ---------------- */
+  .gates{display:grid; gap:26px}
+  .gate{
+    position:relative; display:block; cursor:pointer;
+    background:var(--paper); border:var(--bw) solid var(--ink); border-radius:var(--r);
+    padding:30px 32px 28px; box-shadow:var(--hard);
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .gate:hover{transform:translate(-4px,-4px); box-shadow:13px 13px 0 var(--ink)}
+  .gate:has(.enter:active){transform:translate(2px,2px); box-shadow:4px 4px 0 var(--ink)}
+  .gate .gate-fig,.gate .board{cursor:auto}
+  .gate-fig{
+    margin:0 0 24px; border:2px solid var(--ink); border-radius:16px; overflow:hidden;
+    line-height:0; background:var(--paper);
+  }
+  .gate-fig img{display:block; width:100%; height:auto; max-width:100%}
+  .gate .head{display:flex; align-items:center; gap:16px; flex-wrap:wrap}
+  .gate .abadge{
+    flex:0 0 auto; width:62px; height:62px; border-radius:18px;
+    border:var(--bw) solid var(--ink); display:grid; place-items:center;
+    font-family:Bungee,sans-serif; font-size:30px; color:var(--paper); line-height:1;
+    box-shadow:var(--hard-sm);
+  }
+  .gate[data-k="a"] .abadge{background:var(--a)}
+  .gate[data-k="b"] .abadge{background:var(--b)}
+  .gate .kicker{display:flex; flex-direction:column}
+  .gate .kicker .en{font-family:Bungee,sans-serif; font-size:12px; letter-spacing:.14em; color:var(--ink-2)}
+  .gate .kicker .cn{font-family:"ZCOOL QingKe HuangYou",sans-serif; font-size:19px; line-height:1.3}
+  .gate h3{
+    font-family:"ZCOOL QingKe HuangYou",sans-serif;
+    font-size:clamp(28px,6vw,46px); line-height:1.16; margin:20px 0 0; max-width:24em;
+  }
+  .gate[data-k="a"] h3{color:var(--a)}
+  .gate[data-k="b"] h3{color:var(--b)}
+  .gate .one{margin:14px 0 0; max-width:46em; font-size:14.5px; color:var(--ink)}
+  .gate .one.first{font-size:16px; font-weight:700; margin-top:18px}
+  .gate .one.last{font-weight:700; color:var(--b)}
+  .pills{display:flex; flex-wrap:wrap; gap:12px; margin-top:22px}
+  .pill{
+    border:2px solid var(--ink); border-radius:14px; padding:11px 15px; max-width:31em;
+    background:var(--lemon-soft);
+  }
+  .pill .k{display:block; font-family:Bungee,sans-serif; font-size:10px; letter-spacing:.12em; color:var(--ink-2)}
+  .pill .v{display:block; font-weight:700; font-size:14px; margin-top:2px}
+  .enter{
+    display:inline-flex; align-items:center; gap:10px; margin-top:26px;
+    cursor:pointer; -webkit-appearance:none; appearance:none; text-align:left;
+    transition:transform .14s ease, box-shadow .14s ease;
+    border:var(--bw) solid var(--ink); border-radius:999px; padding:12px 24px;
+    font-family:"ZCOOL QingKe HuangYou",sans-serif; font-size:19px; color:var(--paper);
+    box-shadow:var(--hard-sm);
+  }
+  .gate[data-k="a"] .enter{background:var(--a)}
+  .gate[data-k="b"] .enter{background:var(--b)}
+  .enter .chev{font-family:Bungee,sans-serif; font-size:13px; transition:transform .2s ease}
+  .enter:hover{transform:translate(-2px,-2px); box-shadow:6px 6px 0 var(--ink)}
+  .enter:active{transform:translate(2px,2px); box-shadow:2px 2px 0 var(--ink)}
+  .enter[aria-expanded="true"] .chev{transform:rotate(90deg)}
+  .enter[aria-expanded="true"] .open-l{display:none}
+  .enter .close-l{display:none}
+  .enter[aria-expanded="true"] .close-l{display:inline}
+
+
+  /* ---------------- 方案画板（重建） ---------------- */
+  .board{
+    margin:26px 0 0; border:2px solid var(--ink); border-radius:20px;
+    background:#FFFCF0; padding:24px 20px 24px;
+  }
+  .board-top{display:flex; flex-wrap:wrap; align-items:center; gap:18px 30px; margin-bottom:26px}
+  .wordmark{position:relative; display:inline-block; padding:2px 6px}
+  .wordmark .blob{
+    position:absolute; left:-6px; top:-2px; width:62%; height:104%;
+    background:var(--lemon); border-radius:46% 54% 58% 42%/58% 44% 56% 42%; z-index:0;
+  }
+  .wordmark .w{
+    position:relative; z-index:1; font-family:Bungee,sans-serif; font-size:clamp(26px,5vw,40px);
+    letter-spacing:-.01em; color:var(--ink);
+  }
+  .board-top .vs{display:flex; flex-wrap:wrap; align-items:baseline; gap:10px 16px;
+    font-family:"ZCOOL QingKe HuangYou",sans-serif; font-size:clamp(19px,3.6vw,30px)}
+  .board-top .vs u{text-decoration:none; padding-bottom:4px; border-bottom:3px solid}
+  .board-top .vs .p{border-color:#7C5BD0}
+  .board-top .vs .r{border-color:#E0452B}
+  .board-top .vs .and{font-family:Bungee,sans-serif; font-size:.6em; color:var(--ink-2)}
+
+  .cols{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; align-items:stretch}
+  @media (max-width:820px){.cols{grid-template-columns:1fr}}
+  .col{border:2px solid; border-radius:18px; padding:16px; display:flex; flex-direction:column; gap:14px}
+  .col.c1{border-color:#C9BCEC; background:#F4F0FE}
+  .col.c2{border-color:#BCCDEF; background:#EFF4FE}
+  .col.c3{border-color:#F0CFA8; background:#FEF5EB}
+  .col .cap{
+    border-radius:12px; padding:20px 14px; text-align:center; color:var(--paper);
+    font-family:"ZCOOL QingKe HuangYou",sans-serif; font-size:clamp(23px,4.4vw,31px);
+    line-height:1.24; letter-spacing:.02em;
+    min-height:166px; display:grid; place-content:center;
+  }
+  .col.c1 .cap{background:#7C5BD0}
+  .col.c2 .cap{background:#2E63D6}
+  .col.c3 .cap{background:#F5601F}
+  .col .body{
+    flex:1; border-radius:12px; padding:18px 14px; text-align:center;
+    display:grid; gap:12px; align-content:center;
+    font-size:13px; line-height:1.65; color:var(--ink);
+  }
+  .col.c1 .body{background:#DED3F2}
+  .col.c2 .body{background:#CDE7E9}
+  .col.c3 .body{background:#F0D8B4}
+  .col .body .get{font-size:12px; color:#5A5F7A}
+  .col .body .prize{font-family:"ZCOOL QingKe HuangYou",sans-serif; font-size:clamp(19px,3.4vw,25px); line-height:1.3}
+  .board.b .vs .p{border-color:#2B4BFF}
+  .board.b .vs .r{border-color:#7C4BD0}
+  .col.b1{border-color:#BCD2F2; background:#EFF5FE}
+  .col.b1 .cap{background:#3E7BE8}
+  .col.b1 .body{background:#CFE0F7}
+  .col.b2{border-color:#C3C5EE; background:#F1F1FD}
+  .col.b2 .cap{background:#4B55D8}
+  .col.b2 .body{background:#D5D6F5}
+  .col.b3{border-color:#D2BEEE; background:#F6F0FE}
+  .col.b3 .cap{background:#7C4BD0}
+  .col.b3 .body{background:#E0D2F2}
+  @media (max-width:560px){.col .cap{min-height:132px}}
+  .board-note{margin:22px 0 0; font-size:12.5px; color:var(--ink-2); text-align:center}
+
+  /* ---------------- 详情 ---------------- */
+  .detail{
+    margin-top:26px; background:var(--paper); border:var(--bw) solid var(--ink);
+    border-radius:var(--r); padding:34px 32px 32px; box-shadow:var(--hard);
+    scroll-margin-top:20px; animation:pop .26s ease both;
+  }
+  @keyframes pop{from{opacity:.4; transform:translateY(-10px)} to{opacity:1; transform:none}}
+  .detail > header{padding-bottom:6px}
+  .detail .eyebrow{
+    font-family:Bungee,sans-serif; font-size:11px; letter-spacing:.14em; color:var(--paper);
+    background:var(--ink); border-radius:999px; padding:6px 13px 4px; display:inline-block;
+  }
+  .detail h3{font-family:"ZCOOL QingKe HuangYou",sans-serif; font-size:clamp(30px,6.2vw,50px); line-height:1.15; margin:16px 0 0}
+  .detail[data-k="a"] h3{color:var(--a)}
+  .detail[data-k="b"] h3{color:var(--b)}
+  .lead{margin:16px 0 0; max-width:56em; font-weight:500}
+
+  .block{margin-top:40px}
+  .block > h4{
+    display:flex; align-items:center; gap:13px; margin-bottom:18px;
+    font-family:"ZCOOL QingKe HuangYou",sans-serif; font-size:25px; line-height:1.3;
+  }
+  .block > h4 .n{
+    flex:0 0 auto; width:34px; height:34px; border-radius:11px; border:2px solid var(--ink);
+    display:grid; place-items:center; font-family:Bungee,sans-serif; font-size:13px;
+    color:var(--paper); line-height:1;
+  }
+  .detail[data-k="a"] .block > h4 .n{background:var(--a)}
+  .detail[data-k="b"] .block > h4 .n{background:var(--b)}
+  .block .lead{margin:0 0 16px}
+
+  ul.clean{margin:0; padding-left:0; list-style:none; display:grid; gap:12px}
+  ul.clean > li{padding-left:24px; position:relative}
+  ul.clean > li::before{
+    content:""; position:absolute; left:0; top:.6em; width:11px; height:11px;
+    border:2px solid var(--ink); border-radius:4px;
+  }
+  .detail[data-k="a"] ul.clean > li::before{background:var(--a)}
+  .detail[data-k="b"] ul.clean > li::before{background:var(--b)}
+  ul.clean strong{font-weight:700}
+  .detail[data-k="a"] ul.clean strong{color:var(--a)}
+  .detail[data-k="b"] ul.clean strong{color:var(--b)}
+
+  table.data{width:100%; font-size:13.5px; min-width:520px; border:2px solid var(--ink); border-radius:12px}
+  table.data th,table.data td{padding:12px 15px; text-align:left; border-bottom:2px solid var(--ink)}
+  table.data thead th{
+    font-family:Bungee,sans-serif; font-size:11px; letter-spacing:.1em; background:var(--lemon);
+  }
+  table.data tbody tr:last-child td{border-bottom:none}
+  table.data td.num{font-family:Bungee,sans-serif; font-size:13px; white-space:nowrap; letter-spacing:.01em}
+  .detail[data-k="a"] table.data strong{color:var(--a)}
+  .detail[data-k="b"] table.data strong{color:var(--b)}
+
+  .ticket{
+    margin-top:18px; border:2px dashed var(--ink); border-radius:16px;
+    padding:18px 20px; font-size:13.8px; line-height:1.75; background:var(--lemon-soft);
+  }
+  .ticket .tag{
+    display:inline-block; font-family:Bungee,sans-serif; font-size:10px; letter-spacing:.12em;
+    background:var(--ink); color:var(--lemon); border-radius:999px; padding:5px 11px 3px; margin-bottom:9px;
+  }
+
+  .steps{display:grid; gap:14px}
+  .step{
+    display:grid; grid-template-columns:auto 1fr; gap:18px; align-items:start;
+    border:2px solid var(--ink); border-radius:18px; padding:18px 20px; background:var(--paper);
+    box-shadow:var(--hard-sm);
+  }
+  .step .n{
+    width:34px; height:34px; border-radius:50%; border:2px solid var(--ink);
+    display:grid; place-items:center; font-family:Bungee,sans-serif; font-size:14px;
+    color:var(--paper); line-height:1;
+  }
+  .detail[data-k="a"] .step .n{background:var(--a)}
+  .detail[data-k="b"] .step .n{background:var(--b)}
+  .step h5{margin:0 0 5px; font-family:"ZCOOL QingKe HuangYou",sans-serif; font-size:19px; line-height:1.35}
+  .step p{margin:0; font-size:13.8px}
+  .step code{
+    font-weight:700; font-size:13.5px; background:var(--lemon); border:1.5px solid var(--ink);
+    border-radius:7px; padding:1px 7px;
+  }
+
+  .tiers{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+  @media (max-width:800px){.tiers{grid-template-columns:1fr}}
+  .tier{
+    border:2px solid var(--ink); border-radius:18px; padding:20px; background:var(--paper);
+    display:flex; flex-direction:column; gap:10px; box-shadow:var(--hard-sm);
+  }
+  .tier .step-tag{
+    align-self:flex-start; font-family:Bungee,sans-serif; font-size:10px; letter-spacing:.12em;
+    border:2px solid var(--ink); border-radius:999px; padding:4px 11px 2px; background:var(--b); color:var(--paper);
+  }
+  .tier .cond{font-size:13px; min-height:3.6em}
+  .tier .amt{font-family:Bungee,sans-serif; font-size:40px; line-height:1; color:var(--b)}
+  .tier .amt sub{font-family:"Noto Sans SC",sans-serif; font-weight:700; font-size:12px; color:var(--ink); vertical-align:baseline; margin-left:7px}
+  .tier .plus{font-size:12.5px; color:var(--ink-2)}
+
+  .qa{display:grid; gap:15px}
+  .qa div{border:2px solid var(--ink); border-radius:16px; padding:15px 18px; background:var(--lemon-soft)}
+  .qa p{margin:0}
+  .qa p.q{font-weight:700; font-size:14.5px}
+  .qa p.ans{font-size:13.8px; margin-top:4px}
+
+  .linkout{
+    display:inline-flex; align-items:center; gap:10px; margin:22px 0 4px; text-decoration:none;
+    border:var(--bw) solid var(--ink); border-radius:999px; padding:13px 24px;
+    font-family:"ZCOOL QingKe HuangYou",sans-serif; font-size:19px;
+    background:var(--lemon); box-shadow:var(--hard-sm);
+  }
+  .signup{
+    margin-top:18px; border:2px solid var(--ink); border-radius:18px; padding:20px 22px;
+    background:var(--lemon); display:flex; flex-wrap:wrap; gap:6px 22px; align-items:center;
+    box-shadow:var(--hard-sm);
+  }
+  .signup .k{font-family:Bungee,sans-serif; font-size:11px; letter-spacing:.12em}
+  .signup .v{font-family:Bungee,sans-serif; font-size:27px; color:var(--b)}
+
+  /* ---------------- 组合玩法 ---------------- */
+  .combo{
+    margin-top:62px; background:var(--ink); color:var(--paper);
+    border:var(--bw) solid var(--ink); border-radius:var(--r);
+    padding:36px 32px 34px; box-shadow:var(--hard);
+  }
+  .combo .eyebrow{
+    display:inline-block; font-family:Bungee,sans-serif; font-size:12px; letter-spacing:.14em;
+    background:var(--lemon); color:var(--ink); border-radius:999px; padding:6px 14px 4px;
+  }
+  .combo h3{
+    font-family:"ZCOOL QingKe HuangYou",sans-serif; font-size:clamp(27px,5.6vw,44px);
+    line-height:1.18; margin:18px 0 0; color:var(--lemon);
+  }
+  .combo p{margin:16px 0 0; max-width:46em; font-size:14.5px; color:rgba(255,255,255,.88)}
+  .chain{display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-top:26px}
+  .chain i{font-style:normal; font-family:Bungee,sans-serif; color:var(--lemon); font-size:14px}
+  .chain span{
+    background:var(--paper); color:var(--ink); border-radius:999px; padding:9px 17px;
+    font-size:13.5px; font-weight:700;
+  }
+  .chain span b{font-family:Bungee,sans-serif; font-size:11px; color:var(--a); margin-right:8px}
+
+  footer.page{margin-top:50px; font-size:13px; display:grid; gap:12px}
+  footer.page .docs{display:flex; flex-wrap:wrap; gap:10px 14px; align-items:center}
+  footer.page a{
+    text-decoration:none; font-weight:700; background:var(--paper);
+    border:2px solid var(--ink); border-radius:999px; padding:6px 15px; box-shadow:2px 2px 0 var(--ink);
+  }
+  footer.page .fine{color:var(--ink-2)}
+
+  @media (max-width:560px){
+    .hero{padding-top:40px}
+    .gate{padding:24px 20px 22px}
+    .detail{padding:26px 20px 24px}
+    .combo{padding:28px 20px 26px}
+    :root{--hard:6px 6px 0 var(--ink)}
+  }
+</style>
+
+<div class="tape"></div>
+
+<header class="hero">
+  <div class="badge-row">
+    <span class="brand-chip">noknoc<small>创作者激励</small></span>
+  </div>
+  <h1>
+    <span class="row"><span class="n">01</span>一条<span class="hl orange">带作品出圈</span></span>
+    <span class="row"><span class="n">02</span>一条<span class="hl blue">建一个世界</span></span>
+  </h1>
+  <p class="lede">noknoc 同时开放两个创作者激励活动：把作品发到站外拿现金投流，或者开一个企划世界当世界主。想参加哪个，点开哪个详情。</p>
+  <p class="sticker"><span class="star">✦</span><span>两个活动可以<strong>同时参加</strong>——同一个企划世界的剧情视频，既能拿企划奖励，也能带话题发社媒再拿一次流量激励。</span></p>
+</header>
+
+<div class="wrap">
+
+
+  <div class="sec">
+    <span class="tag">choose your track</span>
+    <h2>选一条路开始</h2>
+    <span class="rule"></span>
+  </div>
+
+  <div class="gates">
+    <article class="gate" data-k="a">
+      <figure class="gate-fig">
+        <img src="assets/hero.jpg" width="1920" height="823" alt="noknoc：发布社媒作品，官方一路给奖">
+      </figure>
+      <span class="head">
+        <span class="abadge">A</span>
+        <span class="kicker"><span class="en">track a</span><span class="cn">社媒激励</span></span>
+      </span>
+      <h3>带作品出圈，赢钱赢积分</h3>
+      <p class="one">把你在 noknoc 创作的世界、视频或设定，带官方话题发到抖音 / 小红书 / B站——发得出、有人看、能爆，官方一路给奖 + 帮你推。</p>
+      <span class="pills">
+        <span class="pill"><span class="k">奖励 reward</span><span class="v">生成积分 + 现金投流 200／600 元起 + 爆款 ×5 与神秘大奖</span></span>
+        <span class="pill"><span class="k">节奏 cadence</span><span class="v">每自然周统计，下周一公布</span></span>
+      </span>
+
+      <div class="board">
+        <div class="board-top">
+          <span class="wordmark"><span class="blob"></span><span class="w">noknoc</span></span>
+          <span class="vs"><u class="p">积分</u><span class="and">and</span><u class="r">官方现金投流</u></span>
+        </div>
+        <div class="cols">
+          <div class="col c1">
+            <div class="cap">话题<br>投稿</div>
+            <div class="body">
+              <span>带 noknoc 精选话题<br>在站外合规发布</span>
+              <span class="get">即可获得</span>
+              <span class="prize">生成积分</span>
+            </div>
+          </div>
+          <div class="col c2">
+            <div class="cap">流量<br>达成</div>
+            <div class="body">
+              <span>站外合规发布话题作品<br>单条播放量达标</span>
+              <span class="get">即可获得</span>
+              <span class="prize">官方投流<br>＋<br>大额生成积分</span>
+            </div>
+          </div>
+          <div class="col c3">
+            <div class="cap">爆款<br>×<br>官方推广</div>
+            <div class="body">
+              <span>该作品若获社媒官方推广<br>（上热门／加精／官方号转发等）</span>
+              <span class="get">即可获得</span>
+              <span class="prize">加倍奖励<br>＋<br>爆款神秘奖</span>
+            </div>
+          </div>
+        </div>
+        <p class="board-note">三重奖励结构总览 · 点开详情看具体门槛与金额</p>
+      </div>
+      <button class="enter" id="btn-a" aria-expanded="false" aria-controls="detail-a"><span class="chev">▶</span><span class="open-l">点开活动详情</span><span class="close-l">收起详情</span></button>
+    </article>
+
+    <section class="detail" data-k="a" id="detail-a" aria-labelledby="btn-a" hidden>
+      <header>
+        <p><span class="eyebrow">track a · 活动详情</span></p>
+        <h3>社媒激励活动</h3>
+        <p class="lead">三重奖励叠着拿：发就有的投稿奖、按播放量给的流量奖、以及爆款命中社媒官方推广后的五倍加成。</p>
+      </header>
+
+      <a class="linkout" href="https://resonate.feishu.cn/wiki/Ux0Cwec6Wi5DBhkl9jdcmed9n0e" target="_blank" rel="noopener">查看原文档与提报入口 →</a>
+
+
+      <div class="block">
+        <h4><span class="n">01</span>话题投稿 · 发就有</h4>
+        <ul class="clean">
+          <li>带 noknoc 指定话题在站外合规发布作品，即可获得 <strong>10 个生成积分</strong>。</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <h4><span class="n">02</span>流量达成 · 按单条播放量</h4>
+        <p class="lead">站外合规发布的话题作品，<strong>单条播放量达标</strong>即按下表奖励。抖音与 B站/小红书 的门槛不同。</p>
+        <div class="scroller">
+          <table class="data">
+            <thead><tr><th>平台</th><th>播放量阶梯</th><th>激励</th></tr></thead>
+            <tbody>
+              <tr><td>抖音</td><td class="num">1w ≤ 播放量 &lt; 5w</td><td><strong>1000 生成积分</strong> + noknoc 官方投流（最低 200 元起）</td></tr>
+              <tr><td>抖音</td><td class="num">5w ≤ 播放量</td><td><strong>2000 生成积分</strong> + noknoc 官方投流（最低 600 元起）</td></tr>
+              <tr><td>B站 / 小红书</td><td class="num">5000 ≤ 播放量 &lt; 1w</td><td><strong>1000 生成积分</strong> + noknoc 官方投流（最低 200 元起）</td></tr>
+              <tr><td>B站 / 小红书</td><td class="num">1w ≤ 播放量</td><td><strong>2000 生成积分</strong> + noknoc 官方投流（最低 600 元起）</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="ticket"><span class="tag">官方投流是什么</span><br>单条作品播放达标（≥3000）后，官方会主动为它投流加推，帮你二次放大、冲更高播放，<strong>不占用你的任何成本</strong>。</p>
+      </div>
+
+      <div class="block">
+        <h4><span class="n">03</span>爆款 × 社媒官方推广 · 五倍加成</h4>
+        <p class="lead">作品获得社媒官方推广（上热门 / 加精 / 官方号转发），即可获取上述激励的 <strong>五倍奖励，并派送神秘大奖</strong>。更有运营 1v1 共建、行业合作优先推荐、官方账号联动同步加持。</p>
+        <ul class="clean">
+          <li>核算方法：<strong>激励 = 流量达成激励 × 5.0 + 神秘大奖</strong></li>
+          <li>抖音：获得「抖音精选」内容标识，或入选「抖音热榜」</li>
+          <li>B站：入选「B站热门」榜单</li>
+          <li>小红书：入选「小红书热门」榜单</li>
+        </ul>
+        <p class="ticket"><span class="tag">举例</span><br>抖音作品播放量破 5w，并获得抖音精选标识 → 【1000 生成积分 + 官方投流 600 元起】<strong> × 5 </strong>= <strong>5000 生成积分 + 3000 元起官方投流 + 神秘大奖</strong>。</p>
+      </div>
+
+      <div class="block">
+        <h4><span class="n">04</span>参与方式 · 三步走</h4>
+        <div class="steps">
+          <div class="step">
+            <span class="n">1</span>
+            <div>
+              <h5>【必要门槛】先在 noknoc 站内发布</h5>
+              <p>内容必须合法合规、符合平台规范；作品必须原创，<strong>80% 以上内容使用 noknoc agent 创作，并公布制作过程</strong>。草稿、未发布的作品不计入。</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="n">2</span>
+            <div>
+              <h5>发到抖音 / 小红书 / B站，带齐官方话题</h5>
+              <p>作品标题必须带 <code>#noknoc AI幻想世界</code>，并带上活动话题 <code>#noknoc世界共创</code>；正片 / 正文第一行 / 评论区须表明“该视频由 noknoc 支持制作”。</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="n">3</span>
+            <div>
+              <h5>自主提报</h5>
+              <p>为确保顺利获得激励，请自主提报参选作品，并附上作品数据截图（含你的主页可见）+ 作品链接，上传至飞书问卷。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block">
+        <h4><span class="n">05</span>结算规则</h4>
+        <ul class="clean">
+          <li><strong>评选时间</strong>：每个自然周（周一至周日）统计评选，下周一公布评选结果。</li>
+          <li><strong>评选范围</strong>：仅激励 30 日内发布的作品；同一作品只能选一个平台提报，<strong>每个作品仅可获得 1 次激励</strong>。</li>
+          <li><strong>多平台不叠加</strong>：同一作品发了多个平台，只取数据最高的一个平台计奖。</li>
+          <li><strong>奖项叠加</strong>：话题投稿奖（发就有）+ 爆款奖（按最高播放档）可同时拿；爆款奖只按命中的最高一档，不跨档叠加，系数 5.0 只作用于爆款奖。</li>
+          <li><strong>播放量口径</strong>：以上传截止时各平台后台的真实播放数为准，官方逐条复核。</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <h4><span class="n">06</span>常见问题</h4>
+        <div class="qa">
+          <div><p class="q">怎样才算“合规发布”、能计入奖励？</p><p class="ans">需同时满足：① 作品是 noknoc 站内已发布内容；② 站外发布带齐官方话题；③ 真实公开账号；④ 在活动期内发布。缺任一项不计入。</p></div>
+          <div><p class="q">草稿 / 没发布的作品算吗？</p><p class="ans">不算。作品必须站内已发布、且站外正式公开发布并带齐话题。</p></div>
+          <div><p class="q">怎么提交？什么时候发奖？</p><p class="ans">把作品链接 + 数据截图上传至飞书问卷；每周运营统一复核，以当期公告为准。</p></div>
+        </div>
+      </div>
+
+    </section>
+
+    <article class="gate" data-k="b">
+      <figure class="gate-fig">
+        <img src="assets/track-b.jpg" width="1920" height="823" alt="noknoc：建一个世界，让大家住进来玩">
+      </figure>
+      <span class="head">
+        <span class="abadge">B</span>
+        <span class="kicker"><span class="en">track b</span><span class="cn">企划世界主</span></span>
+      </span>
+      <h3>建一个世界，让大家住进来玩</h3>
+      <p class="one first">企划世界，是专为 noknoc「生视频 + 共创」定制的一种玩法——每个用户带着自己的 OC 入住同一个世界，一起创作设定和剧情。</p>
+      <p class="one">角色之间有能力差异，不同的角色会拿到不同的线索、道具和技能，所以每个玩家都是自己那条故事线的主角，又被收束在同一个大事件里。</p>
+      <p class="one">作为世界主，你定题材、搭世界观、设计主线玩法与奖励，再把玩家招进来；开企后按周推进剧情——下发事件与线索，玩家接着创作，每轮收尾产出一份归档，成为下一轮的地基。官方提供模板、世界观评审和 1v1 协助，不用从 0 开始，一期建议 2~3 周。</p>
+      <p class="one last">市面上还没出现同类型的产品——你将是第一批登陆的「世界主」。</p>
+      <span class="pills">
+        <span class="pill"><span class="k">奖励 reward</span><span class="v">生成积分 + 官方扶持：1v1 陪跑 · 招募投流</span></span>
+        <span class="pill"><span class="k">节奏 cadence</span><span class="v">随时报名，1–2 个工作日联系</span></span>
+      </span>
+
+      <div class="board b">
+        <div class="board-top">
+          <span class="wordmark"><span class="blob"></span><span class="w">noknoc</span></span>
+          <span class="vs"><u class="p">生成积分</u><span class="and">and</span><u class="r">官方合作</u></span>
+        </div>
+        <div class="cols">
+          <div class="col b1">
+            <div class="cap">生成<br>积分</div>
+            <div class="body">
+              <span>搭建自己的企划世界<br>招募玩家一起共创</span>
+              <span class="get">即可获得</span>
+              <span class="prize">大额生成积分<br>世界主与共创用户同享</span>
+            </div>
+          </div>
+          <div class="col b2">
+            <div class="cap">官方<br>陪跑</div>
+            <div class="body">
+              <span>企划通过官方评审<br>从开团到收官全程有人带</span>
+              <span class="get">即可获得</span>
+              <span class="prize">官方 1v1 辅助<br>＋<br>社群运营支持</span>
+            </div>
+          </div>
+          <div class="col b3">
+            <div class="cap">资源<br>加持</div>
+            <div class="body">
+              <span>在社媒发布招募贴<br>持续更新世界剧情</span>
+              <span class="get">即可获得</span>
+              <span class="prize">小红书投流扶持<br>＋<br>生图生视频免费</span>
+            </div>
+          </div>
+        </div>
+        <p class="board-note">我们鼓励你开一个属于自己的企划世界 —— 积分之外，还有官方合作与资源加持</p>
+      </div>
+      <button class="enter" id="btn-b" aria-expanded="false" aria-controls="detail-b"><span class="chev">▶</span><span class="open-l">点开活动详情</span><span class="close-l">收起详情</span></button>
+    </article>
+
+    <section class="detail" data-k="b" id="detail-b" aria-labelledby="btn-b" hidden>
+      <header>
+        <p><span class="eyebrow">track b · 活动详情</span></p>
+        <h3>「企划世界主」招募</h3>
+        <p class="lead">企划世界是专为 noknoc「生视频 + 共创」定制的一种玩法：每个用户带着自己的 OC 入住同一个世界，一起创作设定和剧情。角色有能力差异，不同角色可以获得不同的线索、道具和技能。</p>
+      </header>
+
+      <a class="linkout" href="https://resonate.feishu.cn/wiki/EMpQwlYgtiDYfrko2SZcoC25nqg" target="_blank" rel="noopener">查看原文档与开团模板 →</a>
+
+      <div class="block">
+        <h4><span class="n">01</span>我们在找什么样的人</h4>
+        <p class="lead">一句话：<strong>能搭世界、会讲故事、愿意带着一群人一起玩的人。</strong>你不需要是专业策划或职业 DM，但我们希望你：</p>
+        <ul class="clean">
+          <li><strong>能搭建世界观、设计玩法</strong>——有自己想做的题材，能把“一个好点子”变成“一群人能玩起来的规则”。</li>
+          <li><strong>会用 AI Agent 做视频</strong>——noknoc 的剧情靠生成视频推进，你需要熟练使用 AI 生视频。</li>
+          <li><strong>有基础的社群运营能力</strong>——能发群公告、答疑解惑、维持群内讨论氛围。</li>
+          <li><strong>有一定的招募能力</strong>——能从自己的圈子（粉丝群、语C群、同好群、社交平台）拉到初始玩家。</li>
+        </ul>
+        <p class="ticket"><span class="tag">最核心的一条</span><br>以上都不是最重要的——最最最核心的是：<strong>你真的想建一个属于自己的世界。</strong></p>
+      </div>
+
+      <div class="block">
+        <h4><span class="n">02</span>成为世界主后，你要做什么</h4>
+        <ul class="clean">
+          <li><strong>开企前</strong>：选定题材 → 搭建世界观 → 设计主线玩法与奖励 → 招募玩家。我们提供模板和必要的协助，无需从 0 开始。</li>
+          <li><strong>开企后</strong>：按周推进剧情。最小企划时长单位为 1 周，建议企划时长 <strong>2~3 周</strong>。</li>
+        </ul>
+        <div class="scroller" style="margin-top:18px">
+          <table class="data">
+            <thead><tr><th>节奏</th><th>你要做的事</th></tr></thead>
+            <tbody>
+              <tr><td class="num">D1–D3</td><td>说明玩法和主线任务，带玩家入住世界</td></tr>
+              <tr><td class="num">D4–D6</td><td>发布事件、下发线索，玩家创作后续剧情</td></tr>
+              <tr><td class="num">D7</td><td>发布后续消息 + 本轮结算</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="ticket"><span class="tag">核心交付物</span><br>每轮 D7 产出一份<strong>归档</strong>（本轮既定事实 · 本轮结算），这是企划的核心交付物，也是下一轮剧情的地基。收官时完成结算（成就 / 奖励发放）与整期归档。</p>
+      </div>
+
+      <div class="block">
+        <h4><span class="n">03</span>企划世界怎么设计</h4>
+        <p class="lead">这是我们跑通「魔法学院企划」后沉淀的企划模版，照着做，你的世界大概率能玩起来。想看范例，noknoc 内搜索【我的魔法学院】。</p>
+        <ul class="clean">
+          <li><strong>两条核心判断标准</strong>：① 鼓励不同角色加入，且有共同的画风和属性（企划世界是 2D/3D 画风，真人 / 毛毡 / 像素风格 OC 就不适配）；② 有主线剧情，核心大事件围绕所有参与者展开，且能拆分出不同小事件——每个玩家都是自己剧情的主角、独立成线，但所有人收束在同一个有限范围内。</li>
+          <li><strong>世界观三项底线</strong>：玩家大致主线（用户进来之后要做什么）、世界共创规则（明确“在这个世界里不能做什么”）、结局方向（玩家角色的最终状态方向 + 剧情结果）。</li>
+          <li><strong>主线要简洁易懂</strong>——保证 90% 的玩家都能理解并完成。</li>
+          <li><strong>小事件三条要求</strong>：必须是简单的情景 / 突发事件，不过于复杂，不增加玩家写反应剧情的成本；不建议让玩家站队做非黑即白的选择；不能过度干扰主线的推进。</li>
+          <li><strong>阵营 / 身份体系（非必选，但鼓励设计）</strong>：建议 3–5 个（两个易成二元对立，六个以上难维护）；不同阵营在技能 / 喜好 / 属性 / 专属线索上有差异；相互制约又有合作；不做非黑即白；注意人数平衡，别让某一派超过半数。参考：魔法学院的四学院制、修仙世界的宗门与散修、DND 的阵营体系。</li>
+          <li><strong>题材建议</strong>：最推荐<strong>西幻</strong>（公会 / 冒险者 / 精灵矮人——种族职业现成，公会发任务顺理成章，语C 和绘圈受众多）与<strong>修仙宗门</strong>（功法丹药阵法现成，外门弟子入门＝新生入学，宗门大比＝比赛，且无版权问题）；推荐<strong>现代异能</strong>（管理局 / 事务所，受众多但能力体系要自己编）。原创或泛化设定优先；想做知名 IP 二创请先与我们沟通评估版权风险。</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <h4><span class="n">04</span>奖励条件 · 三档递进</h4>
+        <div class="tiers">
+          <div class="tier">
+            <span class="step-tag">step 01</span>
+            <span class="cond">企划通过审核，且在 noknoc 上搭建完毕（设定、共创规则、初始视频）</span>
+            <span class="amt">1000<sub>生成积分</sub></span>
+            <span class="plus">世界主获得</span>
+          </div>
+          <div class="tier">
+            <span class="step-tag">step 02</span>
+            <span class="cond">企划共创用户 ≥ 20 人</span>
+            <span class="amt">2000<sub>生成积分</sub></span>
+            <span class="plus">世界主获得，且每位共创用户各得 500</span>
+          </div>
+          <div class="tier">
+            <span class="step-tag">step 03</span>
+            <span class="cond">达到高活优质世界（企划结束后平均周活 40%）</span>
+            <span class="amt">2000<sub>生成积分</sub></span>
+            <span class="plus">世界主再获得，另奖励活跃 top5 用户（按二创视频条数）每人 1000</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="block">
+        <h4><span class="n">05</span>平台提供什么</h4>
+        <ul class="clean">
+          <li><strong>平台能力</strong>：内测期生图 / 生视频<strong>完全免费</strong>；世界观资产、角色、场景在平台内沉淀，PC 网页端支持批量上传管理；AI Agent 辅助生成剧情视频，玩家创作门槛低。</li>
+          <li><strong>宣发支持</strong>：世界主在小红书发布招募贴，可获得<strong>投流扶持</strong>。</li>
+          <li><strong>运营陪跑</strong>：官方 1v1 辅助（世界观评审、玩法平衡建议）；首期企划<strong>全程有官方协助</strong>，以及社群运营支持。</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <h4><span class="n">06</span>报名方式</h4>
+        <p class="lead">报名时请附上：你想做的题材方向、相关经验（语C / 跑团 / 企划 / 社群，有则写）、预计能招募到的初始玩家规模。我们会在 <strong>1–2 个工作日</strong>内联系你，通过初审后进入 1v1 开团辅导流程。</p>
+        <div class="signup">
+          <span class="k">报名 qq</span>
+          <span class="v">3998152485</span>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <div class="combo">
+    <span class="eyebrow">a + b</span>
+    <h3>两个都参加，奖励是可以串起来的</h3>
+    <p>企划世界每轮都会产出大量剧情视频——这些视频本身就是 track A 的合格参选作品。做世界主的同时把剧情视频发到站外，一条作品能同时吃到企划积分和社媒流量激励，还能顺手给你的世界招到新玩家。</p>
+    <div class="chain">
+      <span><b>01</b>开一个企划世界</span><i>▶</i>
+      <span><b>02</b>每轮产出剧情视频</span><i>▶</i>
+      <span><b>03</b>带官方话题发抖音 / 小红书 / B站</span><i>▶</i>
+      <span><b>04</b>企划积分 + 流量激励 + 投流引流</span>
+    </div>
+  </div>
+
+  <footer class="page">
+    <div class="docs">
+      <span>活动原文档：</span>
+      <a href="https://resonate.feishu.cn/wiki/Ux0Cwec6Wi5DBhkl9jdcmed9n0e" target="_blank" rel="noopener">社媒激励活动</a>
+      <a href="https://resonate.feishu.cn/wiki/EMpQwlYgtiDYfrko2SZcoC25nqg" target="_blank" rel="noopener">企划世界主招募</a>
+    </div>
+    <div class="fine">两个活动均无固定起止时间，长期开放、滚动结算。本激励政策的最终解释权归 noknoc 社区所有。</div>
+  </footer>
+</div>
+
+<script>
+  (function(){
+    [['btn-a','detail-a'],['btn-b','detail-b']].forEach(function(p){
+      var btn=document.getElementById(p[0]), panel=document.getElementById(p[1]);
+      var toggle=function(){
+        var open=btn.getAttribute('aria-expanded')==='true';
+        btn.setAttribute('aria-expanded',open?'false':'true');
+        panel.hidden=open;
+        if(!open){
+          var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          panel.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});
+        }
+      };
+      btn.addEventListener('click',toggle);
+      var card=btn.closest('.gate');
+      card.addEventListener('click',function(e){
+        if(e.target.closest('.enter,.gate-fig,.board,a')) return;   // 按钮自己处理；图与画板不触发
+        if(String(window.getSelection())) return;                   // 正在选文字就不展开
+        toggle();
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
