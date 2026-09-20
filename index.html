@@ -168,6 +168,16 @@
   .enter[aria-expanded="true"] .close-l{display:inline}
 
 
+  .formbtn{
+    display:inline-flex; align-items:center; gap:9px; margin-top:14px; text-decoration:none;
+    border:2px solid var(--ink); border-radius:999px; padding:10px 20px;
+    font-family:"ZCOOL QingKe HuangYou",sans-serif; font-size:18px;
+    background:var(--a); color:var(--paper); box-shadow:3px 3px 0 var(--ink);
+    transition:transform .14s ease, box-shadow .14s ease;
+  }
+  .formbtn:hover{transform:translate(-2px,-2px); box-shadow:6px 6px 0 var(--ink)}
+  a.inline{color:var(--a); font-weight:700; text-decoration:none; border-bottom:2px solid var(--a)}
+
   /* ---------------- 方案画板（重建） ---------------- */
   .board{
     margin:26px 0 0; border:2px solid var(--ink); border-radius:20px;
@@ -528,7 +538,8 @@
             <span class="n">3</span>
             <div>
               <h5>自主提报</h5>
-              <p>为确保顺利获得激励，请自主提报参选作品，并附上作品数据截图（含你的主页可见）+ 作品链接，上传至飞书问卷。</p>
+              <p>为确保顺利获得激励，请自主提报参选作品，并附上作品数据截图（含你的主页可见）+ 作品链接，填写提报问卷。</p>
+              <a class="formbtn" href="https://resonate.feishu.cn/share/base/form/shrcnjylxGlwdsUnVW9RoSkhJOh" target="_blank" rel="noopener">👉 点我提报作品</a>
             </div>
           </div>
         </div>
@@ -550,7 +561,7 @@
         <div class="qa">
           <div><p class="q">怎样才算“合规发布”、能计入奖励？</p><p class="ans">需同时满足：① 作品是 noknoc 站内已发布内容；② 站外发布带齐官方话题；③ 真实公开账号；④ 在活动期内发布。缺任一项不计入。</p></div>
           <div><p class="q">草稿 / 没发布的作品算吗？</p><p class="ans">不算。作品必须站内已发布、且站外正式公开发布并带齐话题。</p></div>
-          <div><p class="q">怎么提交？什么时候发奖？</p><p class="ans">把作品链接 + 数据截图上传至飞书问卷；每周运营统一复核，以当期公告为准。</p></div>
+          <div><p class="q">怎么提交？什么时候发奖？</p><p class="ans">把作品链接 + 数据截图填进<a class="inline" href="https://resonate.feishu.cn/share/base/form/shrcnjylxGlwdsUnVW9RoSkhJOh" target="_blank" rel="noopener">提报问卷</a>；每周运营统一复核，以当期公告为准。</p></div>
         </div>
       </div>
 
